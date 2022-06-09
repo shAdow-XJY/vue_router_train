@@ -5,7 +5,7 @@
     {{pageInfo}}
     <button @click = "routeTo">路由进入Button</button>
   </div>
-  <img alt="one" src="../assets/1.png" style="width: 400px;height: 400px;">
+  <img alt="one" src="../assets/1.png" style="width: 800px;height: 500px;">
 </template>
 
 <script>

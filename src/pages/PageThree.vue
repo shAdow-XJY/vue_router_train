@@ -1,5 +1,5 @@
 <template>
-  <div>vue 2.0 v-model / router-link path+query 传参 / router-link name+params 传参</div>
+  <div>width: 800px;height: 500px;</div>
 
   <button @click="routeBack">路由返回Button</button>
 
@@ -11,8 +11,8 @@
   <router-link :to="{path:'/pageFour',query:{queryPass:pageInfo+queryString}}">点击标签router-link传参--path+query</router-link>
   <br>
   <router-link :to="{name:'pageFour',params:{paramsPass:pageInfo+paramsString}}">点击标签router-link传参--name+params</router-link>
-
-  <img alt="three" src="../assets/3.png" style="width: 400px;height: 400px;">
+  <br>
+  <img alt="three" src="../assets/3.png" style="width: 800px;height: 500px;">
 </template>
 
 <script>

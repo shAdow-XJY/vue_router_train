@@ -1,5 +1,5 @@
 <template>
-  <div>watch监听接收query参数 / useRoute接收params参数 / </div>
+  <div>created接收query参数 / useRoute接收params参数 / index.js中进入PageSix单路由守卫/拦截</div>
 
   <br>pageFiveQueryInfo:{{pageFiveQueryInfo}}
   <br>pageFiveParamsInfo:{{pageFiveParamsInfo}}
@@ -7,20 +7,17 @@
   <br>
   <button @click = "routeBack">路由返回Button</button>
   <br>
-  {{pageInfo}}
+  <button @click = "routePathTo">路由Button:使用path被拦截</button>
   <br>
-  <input type="text" v-model="pageInfo" placeholder="输入传给pageSix的参数">
-  <br>
-  <button @click = "routeQueryTo">路由query传参Button</button>
+  <button @click = "routeNameTo">路由Button:使用name可通过</button>
   <br>
 
-  <img alt="five" src="../assets/5.png" style="width: 400px;height: 400px;">
+  <img alt="five" src="../assets/5.png" style="width: 800px;height: 500px;">
 </template>
 
 <script>
 import {useRoute,useRouter} from "vue-router";
 import {ref} from "vue";
-
 export default {
   name: "PageFive",
   data () {
@@ -28,17 +25,8 @@ export default {
       pageFiveQueryInfo: ""
     }
   },
-  watch: {
-    // eslint-disable-next-line no-unused-vars
-    '$route' (to,from){
-      this.getRouteData()
-    }
-  },
-  methods: {
-    getRouteData(){
-      this.pageFiveQueryInfo = this.$route.query.queryPass
-      this.$router.go(0)
-    }
+  created() {
+    this.pageFiveQueryInfo = this.$route.query.queryPass
   },
   setup () {
     const route = useRoute();
@@ -48,10 +36,24 @@ export default {
     const routeBack = () => {
       router.back()
     }
-
+    const routePathTo = () => {
+      router.push({
+        path:'/pageSix',
+        query:{
+          no:"no"
+        }
+      })
+    }
+    const routeNameTo = () => {
+      router.push({
+        name:'pageSix',
+      })
+    }
     return {
       pageFiveParamsInfo,
-      routeBack
+      routeBack,
+      routePathTo,
+      routeNameTo
     }
   }
 }

@@ -1,21 +1,36 @@
 <template>
-  <div>watch监听接收query参数 / useRoute接收params参数 / </div>
+
+  <div>index.js 全局路由守卫,跳转pageSeven / 路由懒加载 </div>
   <br>
   <button @click = "routeBack">路由返回Button</button>
   <br>
-  {{pageInfo}}
-  <br>
-  <input type="text" v-model="pageInfo" placeholder="输入传给pageSix的参数">
-  <br>
-  <button @click = "routeQueryTo">路由query传参Button</button>
+  <button @click = "routeTo">路由传参Button</button>
   <br>
 
-  <img alt="five" src="../assets/6.png" style="width: 400px;height: 400px;">
+  <img alt="six" src="../assets/6.png" style="width: 800px;height: 500px;">
 </template>
 
 <script>
+import {useRouter} from "vue-router";
 export default {
-  name: "PageSix"
+  name: "PageSix",
+  setup () {
+    const router = useRouter();
+
+    const routeBack = () => {
+      router.back()
+    }
+    const routeTo = () => {
+      router.push({
+        path:'/pageSeven',
+      })
+    }
+
+    return {
+      routeBack,
+      routeTo,
+    }
+  }
 }
 </script>
 
