@@ -1,5 +1,9 @@
 # vue-router
 
+## website
+GithubPages:
+[https://shadowplusing.website/vue_router_index_html/](https://shadowplusing.website/vue_router_index_html/)
+
 ### introduce
 
 1. DEMO项目，针对性地为了上手一下vue-router。
