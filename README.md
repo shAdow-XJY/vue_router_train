@@ -43,6 +43,11 @@ GithubPages:
 > vue-router 动态路由
 > https://router.vuejs.org/zh/guide/essentials/nested-routes.html
 
+### build reference
+1. [使用GitHub部署网站 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/40729141)
+2. [vue.js项目创建打包部署过程 - 简书 (jianshu.com)](https://www.jianshu.com/p/5d90d862f80e)
+3. [(3条消息) vue项目打包发布到线上We‘re sorry but xxxx doesn‘t work properly without JavaScript enabled_Frontend-Lsj的博客-CSDN博客](https://blog.csdn.net/qq_43299315/article/details/108749318)
+
 ### document
 
 1. webstorm创建Vue.js工程
