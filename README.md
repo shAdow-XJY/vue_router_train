@@ -2,7 +2,7 @@
 
 ## website
 GithubPages:
-[https://shadowplusing.website/vue_router_index_html/](https://shadowplusing.website/vue_router_index_html/)
+[https://shadowplusing.website/vue_router_train/](https://shadowplusing.website/vue_router_train/)
 
 ### introduce
 
